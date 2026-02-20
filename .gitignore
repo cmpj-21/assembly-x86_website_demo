@@ -1,0 +1,14 @@
+# Build artifacts
+*.obj
+*.exe
+*.pdb
+*.ilk
+
+# VS Build Tools / IDE files
+.vs/
+*.user
+*.suo
+
+# System files
+Thumbs.db
+Desktop.ini
