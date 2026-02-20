@@ -42,5 +42,3 @@ Open your **Developer Command Prompt** and follow these steps:
 3.  Click the **EXECUTE** button to fetch data directly from the assembly-powered backend.
 
 ---
-
-*Made with zero frameworks and maximum pain.* 🍜
