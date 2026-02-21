@@ -1,6 +1,6 @@
-# x86 Assembly HTTP Server - Windows & Linux
+# x86 Assembly HTTP Server Demo - Windows & Linux
 
-A high-performance (and high-suffering) HTTP server written in raw x86 assembly. Featuring a sleek, cyber-punk CRT frontend.
+A high-performance (and high-suffering) HTTP server demo written in raw x86 assembly. Featuring a sleek, cyber-punk CRT frontend.
 
 ---
 
