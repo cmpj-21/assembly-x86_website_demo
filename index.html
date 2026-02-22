@@ -34,7 +34,6 @@
       position: relative;
     }
 
-    /* CRT scanline effect */
     body::before {
       content: '';
       position: fixed;
@@ -50,7 +49,6 @@
       z-index: 100;
     }
 
-    /* CRT glow */
     body::after {
       content: '';
       position: fixed;
@@ -59,7 +57,6 @@
       pointer-events: none;
     }
 
-    /* Flicker animation */
     @keyframes flicker {
       0%, 95%, 100% { opacity: 1; }
       96% { opacity: 0.8; }
@@ -76,6 +73,111 @@
     @keyframes scanline {
       0% { transform: translateY(-100%); }
       100% { transform: translateY(100vh); }
+    }
+
+    @keyframes flickerC {
+      0%    { opacity: 1; color: var(--green); text-shadow: 0 0 20px rgba(0,255,65,0.5); transform: translateX(0) skewX(0deg); clip-path: none; }
+      2%    { opacity: 0; }
+      2.5%  { opacity: 1; }
+      3%    { opacity: 0.4; }
+      3.3%  { opacity: 1; }
+      3.6%  { opacity: 0; }
+      4%    { opacity: 1; }
+      7%    { opacity: 0.6; }
+      7.2%  { opacity: 1; }
+      7.4%  { opacity: 0; }
+      7.6%  { opacity: 0.8; }
+      7.9%  { opacity: 1; }
+      13%   { opacity: 0.2; }
+      13.2% { opacity: 1; }
+      13.5% { opacity: 0; }
+      13.7% { opacity: 1; }
+      19%   { opacity: 0.5; }
+      19.3% { opacity: 0; }
+      19.5% { opacity: 1; }
+      19.8% { opacity: 0.3; }
+      20%   { opacity: 1; }
+      27%   { opacity: 0; }
+      27.3% { opacity: 1; }
+      27.5% { opacity: 0.7; }
+      27.7% { opacity: 1; }
+      33%   { opacity: 0.1; }
+      33.2% { opacity: 1; }
+      33.4% { opacity: 0; }
+      33.6% { opacity: 1; }
+      38%   { opacity: 0.4; }
+      38.2% { opacity: 0; }
+      38.4% { opacity: 1; }
+      44%   { opacity: 0; }
+      44.2% { opacity: 0.9; }
+      44.4% { opacity: 0; }
+      44.7% { opacity: 1; }
+      50%   { opacity: 0.3; }
+      50.2% { opacity: 1; }
+      53%   { opacity: 0; }
+      53.2% { opacity: 0.6; }
+      53.4% { opacity: 1; }
+      58%   { opacity: 0.2; }
+      58.3% { opacity: 1; }
+      58.6% { opacity: 0; }
+      59%   { opacity: 1; }
+      60%   { opacity: 1; color: var(--green); text-shadow: 0 0 20px rgba(0,255,65,0.5); transform: translateX(0) skewX(0deg); clip-path: none; }
+      60.5% { opacity: 1; color: #ff2020; text-shadow: -4px 0 0 rgba(255,0,0,0.8), 4px 0 0 rgba(0,255,65,0.4); transform: translateX(5px) skewX(-8deg); clip-path: inset(0 0 55% 0); }
+      61%   { opacity: 0.85; color: #ff2020; text-shadow: 4px 0 0 rgba(255,0,0,0.9), -3px 0 0 rgba(0,255,65,0.3); transform: translateX(-4px) skewX(6deg); clip-path: inset(40% 0 0 0); }
+      61.5% { opacity: 1; color: #ff2020; text-shadow: -6px 0 0 rgba(255,0,0,1), 6px 0 0 rgba(0,255,65,0.5); transform: translateX(7px) skewX(-4deg); clip-path: inset(20% 0 30% 0); }
+      62%   { opacity: 0.3; color: var(--green); text-shadow: 0 0 20px rgba(0,255,65,0.5); transform: translateX(0) skewX(0deg); clip-path: none; }
+      62.5% { opacity: 1; color: var(--green); text-shadow: 0 0 20px rgba(0,255,65,0.5); transform: translateX(0) skewX(0deg); clip-path: none; }
+      65%   { opacity: 0.3; }
+      65.3% { opacity: 1; }
+      65.6% { opacity: 0; }
+      65.9% { opacity: 1; }
+      70%   { opacity: 0.5; }
+      70.2% { opacity: 0; }
+      70.5% { opacity: 1; }
+      74%   { opacity: 0.2; }
+      74.3% { opacity: 1; }
+      74.6% { opacity: 0; }
+      74.9% { opacity: 1; }
+      80%   { opacity: 0; }
+      80.3% { opacity: 0.8; }
+      80.6% { opacity: 1; }
+      80.9% { opacity: 0.1; }
+      81.2% { opacity: 1; }
+      87%   { opacity: 0.4; }
+      87.3% { opacity: 1; }
+      87.6% { opacity: 0; }
+      87.9% { opacity: 1; }
+      93%   { opacity: 0; }
+      93.3% { opacity: 0.7; }
+      93.5% { opacity: 1; }
+      93.8% { opacity: 0; }
+      94.1% { opacity: 1; }
+      100%  { opacity: 1; color: var(--green); text-shadow: 0 0 20px rgba(0,255,65,0.5); transform: translateX(0) skewX(0deg); clip-path: none; }
+    }
+
+    @keyframes flickerC_before {
+      0%, 60%   { opacity: 0; }
+      60.5%     { opacity: 0.7; color: #ff2020; transform: translateX(-6px); clip-path: inset(0 0 50% 0); }
+      61%       { opacity: 0.5; transform: translateX(5px); clip-path: inset(45% 0 0 0); }
+      61.5%     { opacity: 0.9; transform: translateX(-8px); clip-path: inset(25% 0 25% 0); }
+      62%       { opacity: 0; }
+      62.5%, 100% { opacity: 0; }
+    }
+
+    .flicker-c {
+      display: inline;
+      position: relative;
+      animation: flickerC 9s steps(1) infinite;
+    }
+
+    .flicker-c::before {
+      content: 'C';
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #00ffff;
+      animation: flickerC_before 9s steps(1) infinite;
+      pointer-events: none;
     }
 
     .scanline {
@@ -122,6 +224,8 @@
       margin-bottom: 2px;
       text-shadow: 0 0 20px rgba(0,255,65,0.5);
     }
+
+
 
     .subtitle {
       font-size: 11px;
@@ -258,7 +362,7 @@
     </div>
 
     <div class="card">
-      <h1>x86 ASM<br>BACKEND</h1>
+      <h1>x86 ASM<br>BA<span class="flicker-c">C</span>KEND</h1>
       <p class="subtitle">localhost:8083 · raw winsock2 · no framework · no mercy</p>
 
       <div class="terminal-block">
@@ -299,7 +403,6 @@
   </div>
 
   <script>
-    // Clock
     function updateClock() {
       const now = new Date();
       document.getElementById('clock').textContent = now.toLocaleTimeString();
